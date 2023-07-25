@@ -20,3 +20,24 @@ p.then((message) => {
 }).catch((message) => {
   console.log('This is in the catch ' + message)
 })
+
+// Promises Practice
+const baseballIsCool = 'maybe';
+
+function vibeCheck () {
+  return new Promise((resolve, reject) => {
+    if (baseballIsCool) {
+      resolve('Damn right baseball is cool')
+    } else if (!baseballIsCool) {
+      reject('You out your damn mind!')
+    } else {
+      reject('Undecided huh?')
+    }
+  })
+}
+
+vibeCheck().then((message) => {
+  console.log(message)
+}).catch((message) => {
+  console.log(message)
+})
